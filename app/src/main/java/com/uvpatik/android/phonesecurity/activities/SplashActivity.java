@@ -1,8 +1,10 @@
-package com.uvpatik.android.phonesecurity;
+package com.uvpatik.android.phonesecurity.activities;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import com.uvpatik.android.phonesecurity.R;
 
 public class SplashActivity extends AppCompatActivity {
 

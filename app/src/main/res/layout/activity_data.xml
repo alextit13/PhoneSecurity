@@ -5,6 +5,234 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.uvpatik.android.phonesecurity.DataActivity">
+    tools:context="com.uvpatik.android.phonesecurity.activities.DataActivity">
+    <ScrollView
+        android:layout_margin="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
+
+            <!-- OS Android -->
+
+            <RelativeLayout
+                android:background="@color/gray_10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:textSize="16sp"
+                    android:textColor="#000"
+                    android:layout_alignParentStart="true"
+                    android:text="@string/os_android"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:textSize="16sp"
+                    android:textColor="#000"
+                    android:id="@+id/os_android"
+                    android:layout_alignParentEnd="true"
+                    tools:text="M"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </RelativeLayout>
+
+
+            <!-- Версия Android -->
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:textSize="16sp"
+                    android:textColor="#000"
+                    android:layout_alignParentStart="true"
+                    android:text="@string/android_version"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:textSize="16sp"
+                    android:textColor="#000"
+                    android:id="@+id/version_android"
+                    android:layout_alignParentEnd="true"
+                    tools:text="6.0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </RelativeLayout>
+
+
+            <!-- Номер прошивки -->
+
+            <RelativeLayout
+                android:background="@color/gray_10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:textSize="16sp"
+                    android:textColor="#000"
+                    android:layout_alignParentStart="true"
+                    android:text="@string/version_prosh"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:textSize="16sp"
+                    android:textColor="#000"
+                    android:id="@+id/version_prosh"
+                    android:layout_alignParentEnd="true"
+                    tools:text="3.34.6434.2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </RelativeLayout>
+
+
+            <!-- Номер сборки -->
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:textSize="16sp"
+                    android:textColor="#000"
+                    android:layout_alignParentStart="true"
+                    android:text="@string/number_assemb"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:textSize="16sp"
+                    android:textColor="#000"
+                    android:id="@+id/sb_number"
+                    android:layout_alignParentEnd="true"
+                    tools:text="54.0092"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </RelativeLayout>
+
+
+            <!-- Версия ПО безопастности -->
+
+            <RelativeLayout
+                android:background="@color/gray_10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:textSize="16sp"
+                    android:textColor="#000"
+                    android:layout_alignParentStart="true"
+                    android:text="@string/po_security"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:textSize="16sp"
+                    android:textColor="#000"
+                    android:id="@+id/security_version"
+                    android:layout_alignParentEnd="true"
+                    tools:text="23"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </RelativeLayout>
+
+
+
+            <!-- Версия KNOX -->
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:textSize="16sp"
+                    android:textColor="#000"
+                    android:layout_alignParentStart="true"
+                    android:text="@string/version_KNOX"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:textSize="16sp"
+                    android:textColor="#000"
+                    android:id="@+id/knox_version"
+                    android:layout_alignParentEnd="true"
+                    tools:text="2.09"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </RelativeLayout>
+
+
+            <!-- Уровень безопасности Андроид -->
+
+            <RelativeLayout
+                android:background="@color/gray_10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:textSize="16sp"
+                    android:textColor="#000"
+                    android:layout_alignParentStart="true"
+                    android:text="@string/level_security"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:textSize="16sp"
+                    android:textColor="#000"
+                    android:id="@+id/level_security"
+                    android:layout_alignParentEnd="true"
+                    tools:text="54.0092"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </RelativeLayout>
+
+            <!-- Установленные приложения -->
+
+            <TextView
+                android:textSize="16sp"
+                android:textColor="#000"
+                android:textAlignment="center"
+                android:text="@string/applications"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <ListView
+                android:id="@+id/all_applications"
+                android:layout_margin="3dp"
+                android:layout_width="match_parent"
+                android:layout_height="300dp">
+            </ListView>
+
+
+            <!-- Открыты ли рут права -->
+
+
+            <RelativeLayout
+                android:background="@color/gray_10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:textSize="16sp"
+                    android:textColor="#000"
+                    android:layout_alignParentStart="true"
+                    android:text="@string/root_prava"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:textSize="16sp"
+                    android:textColor="#000"
+                    android:id="@+id/root"
+                    android:layout_alignParentEnd="true"
+                    tools:text="Да"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </RelativeLayout>
+
+            <!-- Button next -->
+
+            <Button
+                android:id="@+id/next_button"
+                android:text="@string/next"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+
+        </LinearLayout>
+    </ScrollView>
 </RelativeLayout>

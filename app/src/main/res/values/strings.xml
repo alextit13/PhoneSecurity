@@ -7,4 +7,14 @@
         информационной безопасности мобильных устройств на операционной системе Android. \n Версия: v 0.1 . \n Автор: студент 4 курса,
         группы ИБб-141, \n Патык Ю.В.</string>
     <string name="ok">Ok</string>
+    <string name="os_android">OS Android</string>
+    <string name="android_version">Версия Android</string>
+    <string name="version_prosh">Версия прошивки</string>
+    <string name="number_assemb">Номер сборки</string>
+    <string name="po_security">Версия ПО безопасности</string>
+    <string name="version_KNOX">Версия KNOX</string>
+    <string name="level_security">Уровень безопасности</string>
+    <string name="applications">Установленные приложения</string>
+    <string name="root_prava">Открыты ли root-права</string>
+    <string name="next">Далее</string>
 </resources>
