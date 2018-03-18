@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">PhoneSecurity</string>
+    <string name="splash_screen_text">Программа помощи аудитору по проведению аудита информационной 
+        безопасности операционной системы Android</string>
+    <string name="about_application_item_menu">О программе</string>
+    <string name="about_programm_message_dialog">Программа, предназначенная для помощи проведения аудита
+        информационной безопасности мобильных устройств на операционной системе Android. \n Версия: v 0.1 . \n Автор: студент 4 курса,
+        группы ИБб-141, \n Патык Ю.В.</string>
+    <string name="ok">Ok</string>
+</resources>
