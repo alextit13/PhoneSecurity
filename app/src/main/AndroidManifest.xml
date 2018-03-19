@@ -19,9 +19,17 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activities.DataActivity" />
-        <activity android:name=".activities.InfoActivity" />
-        <activity android:name=".activities.ResultActivit"></activity>
+        <activity android:name=".activities.DataActivity"
+            android:noHistory="true"/>
+        <activity
+            android:name=".activities.InfoActivity"
+            android:noHistory="true" />
+        <activity android:name=".activities.ResultActivit"
+            android:noHistory="true"/>
+        <activity android:name=".activities.Recomendation"
+            android:noHistory="true"/>
+        <activity android:name=".activities.FinishActivity"
+            android:noHistory="true"/>
     </application>
 
 </manifest>

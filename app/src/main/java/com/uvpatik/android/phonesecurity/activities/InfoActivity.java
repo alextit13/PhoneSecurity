@@ -6,12 +6,17 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
+import android.widget.CompoundButton;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 
 import com.uvpatik.android.phonesecurity.R;
 import com.uvpatik.android.phonesecurity.classes.objects.Result;
+import com.uvpatik.android.phonesecurity.classes.objects.ResultNums;
 
 public class InfoActivity extends AppCompatActivity {
+
+    private LinearLayout container_1,container_2;
 
     private CheckBox cb_version_android,cb_have_antivirus,cb_root,cb_system_permissions,cb_sms,cb_contakts,cb_camera,cb_location,cb_microphone,cb_disc,cb_ident_data,cb_buys,cb_prosh,cb_knox
             ,cb_internet,cb_protect_internet;
@@ -36,6 +41,26 @@ public class InfoActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 calculate();
+            }
+        });
+        cb_system_permissions.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (isChecked){
+                    container_1.setVisibility(View.VISIBLE);
+                }else{
+                    container_1.setVisibility(View.GONE);
+                }
+            }
+        });
+        cb_internet.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (isChecked){
+                    container_2.setVisibility(View.VISIBLE);
+                }else{
+                    container_2.setVisibility(View.GONE);
+                }
             }
         });
     }
@@ -87,10 +112,17 @@ public class InfoActivity extends AppCompatActivity {
         Intent intent = new Intent(InfoActivity.this,ResultActivit.class);
         intent.putExtra("result", r);
         intent.putExtra("r",result);
+        ResultNums tn = new ResultNums(b_1,b_2,b_3,b_4,b_5,b_6,b_7,b_8,b_9,b_10,b_11,b_12,b_13,b_14,b_15,b_16);
+        intent.putExtra("tn",tn);
         startActivity(intent);
     }
 
     private void initViews() {
+        container_1 = (LinearLayout)findViewById(R.id.container_1);
+        container_1.setVisibility(View.GONE);
+        container_2 = (LinearLayout)findViewById(R.id.container_2);
+        container_2.setVisibility(View.GONE);
+
         cb_version_android = (CheckBox)findViewById(R.id.cb_version_android);cb_have_antivirus = (CheckBox)findViewById(R.id.cb_have_antivirus);cb_root = (CheckBox)findViewById(R.id.cb_root);
         cb_system_permissions = (CheckBox)findViewById(R.id.cb_system_permissions);cb_sms = (CheckBox)findViewById(R.id.cb_sms);cb_contakts = (CheckBox)findViewById(R.id.cb_contakts);
         cb_camera = (CheckBox)findViewById(R.id.cb_camera);cb_location = (CheckBox)findViewById(R.id.cb_location);cb_microphone = (CheckBox)findViewById(R.id.cb_microphone);
@@ -130,7 +162,6 @@ public class InfoActivity extends AppCompatActivity {
         et_knox .setText(0.5+"");
         et_internet.setText(0.9+"");
         et_protect_internet.setText(0.9+"");
-
 
         calculate_risk = (Button)findViewById(R.id.calculate_risk);
     }

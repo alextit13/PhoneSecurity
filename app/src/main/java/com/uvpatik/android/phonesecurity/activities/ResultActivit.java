@@ -9,10 +9,12 @@ import android.widget.TextView;
 
 import com.uvpatik.android.phonesecurity.R;
 import com.uvpatik.android.phonesecurity.classes.objects.Result;
+import com.uvpatik.android.phonesecurity.classes.objects.ResultNums;
 
 public class ResultActivit extends AppCompatActivity {
 
     private Result result;
+    private ResultNums tn;
     private double r;
     private TextView rext_result;
     private Button show_recomendation;
@@ -27,6 +29,7 @@ public class ResultActivit extends AppCompatActivity {
     private void init() {
         Intent intent = getIntent();
         result = (Result) intent.getSerializableExtra("result");
+        tn = (ResultNums)intent.getSerializableExtra("tn");
         r = intent.getDoubleExtra("r",0);
         rext_result = (TextView) findViewById(R.id.rext_result);
         show_recomendation = (Button) findViewById(R.id.show_recomendation);
@@ -34,8 +37,23 @@ public class ResultActivit extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 // show recomendations
+                Intent i = new Intent(ResultActivit.this,Recomendation.class);
+                i.putExtra("result",result);
+                i.putExtra("r",r);
+                i.putExtra("tn",tn);
+                startActivity(i);
             }
         });
-        rext_result.setText("Степень риска = " + r);
+        chengeText();
+    }
+
+    private void chengeText() {
+        if (r>=0&&r<=0.9){
+            rext_result.setText("Степень риска = " + r + "\n" + "Низкая степень риска");
+        }else if (r>=1&&r<=2.9){
+            rext_result.setText("Степень риска = " + r + "\n" + "Средняя степень риска");
+        }else if (r>3){
+            rext_result.setText("Степень риска = " + r + "\n" + "Высокая степень риска");
+        }
     }
 }

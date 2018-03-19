@@ -126,7 +126,7 @@
 
             <!-- collapse list -->
             <LinearLayout
-                android:id="@+id/collapse_panel"
+                android:id="@+id/container_1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="10dp"
@@ -423,6 +423,7 @@
 
             <!-- collapse internet -->
             <LinearLayout
+                android:id="@+id/container_2"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginEnd="10dp"
