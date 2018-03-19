@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">PhoneSecurity</string>
+    <string name="app_name">Аудит ИБ</string>
     <string name="splash_screen_text">Программа помощи аудитору по проведению аудита информационной 
         безопасности операционной системы Android</string>
     <string name="about_application_item_menu">О программе</string>
