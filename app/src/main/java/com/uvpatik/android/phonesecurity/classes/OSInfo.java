@@ -16,7 +16,7 @@ import java.util.List;
 
 public class OSInfo {
     public static String osVersion(){
-        return Build.MODEL;
+        return Build.VERSION.RELEASE;
     }
     public static String AndroidVersion(){
         return Build.VERSION.CODENAME;

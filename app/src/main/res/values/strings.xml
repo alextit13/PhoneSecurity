@@ -17,4 +17,23 @@
     <string name="applications">Установленные приложения</string>
     <string name="root_prava">Открыты ли root-права</string>
     <string name="next">Далее</string>
+    <string name="version_android_above_4">Версия Android выше 4?</string>
+    <string name="weight">Вес</string>
+    <string name="is_hava_antivirus">Установлен антивирус?</string>
+    <string name="is_root">Права root открыты?</string>
+    <string name="is_system_permissions">Система разрешений настроена правильно?</string>
+    <string name="sms">SMS</string>
+    <string name="contakts">Контактам</string>
+    <string name="camera">Камере</string>
+    <string name="location">Местоположению</string>
+    <string name="microphone">Микрофону</string>
+    <string name="disc">Доступ к диску</string>
+    <string name="ident_data">Доступ к идентификационным данным</string>
+    <string name="buys">Покупкам в приложении</string>
+    <string name="prosh">5.\tНа устройстве используются неофициальные или сторонние прошивки?</string>
+    <string name="knox">6.\tУстройство поддерживает KNOX</string>
+    <string name="internet">7.\tИмеется выход в интернет?</string>
+    <string name="protect_internet">Выход в интернет защищен?</string>
+    <string name="calculate_risk">Рассчитать риск</string>
+    <string name="recomendation">Показать рекомендации</string>
 </resources>

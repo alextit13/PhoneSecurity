@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/PhoneSecurity.iml" filepath="$PROJECT_DIR$/PhoneSecurity.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/PhoneSecurity.iml" filepath="$PROJECT_DIR$/.idea/PhoneSecurity.iml" />
+      <module fileurl="file://D:\disk_C\ANDROID\ANDROIN_PROJECTS\PhoneSecurity\PhoneSecurity.iml" filepath="D:\disk_C\ANDROID\ANDROIN_PROJECTS\PhoneSecurity\PhoneSecurity.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://D:\disk_C\ANDROID\ANDROIN_PROJECTS\PhoneSecurity\app\app.iml" filepath="D:\disk_C\ANDROID\ANDROIN_PROJECTS\PhoneSecurity\app\app.iml" />
     </modules>
   </component>
 </project>

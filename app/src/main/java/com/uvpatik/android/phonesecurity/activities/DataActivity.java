@@ -2,6 +2,7 @@ package com.uvpatik.android.phonesecurity.activities;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Build;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -46,7 +47,7 @@ public class DataActivity extends AppCompatActivity {
         next_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // next
+                startActivity(new Intent(DataActivity.this,InfoActivity.class));
             }
         });
     }
