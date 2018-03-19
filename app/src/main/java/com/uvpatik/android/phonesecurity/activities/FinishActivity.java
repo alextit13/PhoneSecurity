@@ -30,16 +30,17 @@ public class FinishActivity extends AppCompatActivity {
         r_0= intent.getDoubleExtra("r_0",0); // был
         r_1 = intent.getDoubleExtra("r",0);  // новый
 
+        DecimalFormat mDf = new DecimalFormat("#.#");
         ((TextView)findViewById(R.id.first_risk)).setText("Исходный риск: " + r_0);
-        ((TextView)findViewById(R.id.second_risk)).setText("Риск после выполнения рекомендаций: " + r_1);
+        ((TextView)findViewById(R.id.second_risk)).setText("Риск после выполнения рекомендаций: " + mDf.format((100*r_1)/r_0) + " %");
         about_risk = (TextView)findViewById(R.id.about_risk);
         DecimalFormat mDecimalFormat = new DecimalFormat("#.#");
         if (r_1>=0&&r_1<=0.9){
-            about_risk.setText("Степень риска = " + mDecimalFormat.format(r_1) + "\n" + "Низкая степень риска");
+            about_risk.setText("Уровень риска = " + mDecimalFormat.format(r_1) + "\n" + "Низкий уровень риска");
         }else if (r_1>=1&&r_1<=2.9){
-            about_risk.setText("Степень риска = " + mDecimalFormat.format(r_1) + "\n" + "Средняя степень риска");
+            about_risk.setText("Уровень риска = " + mDecimalFormat.format(r_1) + "\n" + "Средний уровень риска");
         }else if (r_1>3){
-            about_risk.setText("Степень риска = " + mDecimalFormat.format(r_1) + "\n" + "Высокая степень риска");
+            about_risk.setText("Уровень риска = " + mDecimalFormat.format(r_1) + "\n" + "Высокий уровень риска");
         }
         ((Button)findViewById(R.id.b_exit))
                 .setOnClickListener(

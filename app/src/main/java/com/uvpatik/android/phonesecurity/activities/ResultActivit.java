@@ -11,6 +11,8 @@ import com.uvpatik.android.phonesecurity.R;
 import com.uvpatik.android.phonesecurity.classes.objects.Result;
 import com.uvpatik.android.phonesecurity.classes.objects.ResultNums;
 
+import java.text.DecimalFormat;
+
 public class ResultActivit extends AppCompatActivity {
 
     private Result result;
@@ -48,12 +50,13 @@ public class ResultActivit extends AppCompatActivity {
     }
 
     private void chengeText() {
+        DecimalFormat mDf = new DecimalFormat("#.#");
         if (r>=0&&r<=0.9){
-            rext_result.setText("Степень риска = " + r + "\n" + "Низкая степень риска");
+            rext_result.setText("Уровень риска = " + mDf.format(r) + "\n" + "Низкий уровень риска");
         }else if (r>=1&&r<=2.9){
-            rext_result.setText("Степень риска = " + r + "\n" + "Средняя степень риска");
+            rext_result.setText("Уровень риска = " + mDf.format(r)+ "\n" + "Средний уровень риска");
         }else if (r>3){
-            rext_result.setText("Степень риска = " + r + "\n" + "Высокая степень риска");
+            rext_result.setText("Уровень риска = " + mDf.format(r) + "\n" + "Высокий уровень риска");
         }
     }
 }

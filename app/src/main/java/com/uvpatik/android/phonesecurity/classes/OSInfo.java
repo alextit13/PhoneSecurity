@@ -35,7 +35,11 @@ public class OSInfo {
         return version;
     }
     public static String security(){
-        return Build.VERSION.SECURITY_PATCH;
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            return Build.VERSION.SECURITY_PATCH;
+        }else{
+            return Build.VERSION.SDK_INT+"";
+        }
     }
     public static String knoxVersion(Activity activity){
         String check = "Не установлен";
