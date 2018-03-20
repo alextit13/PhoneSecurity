@@ -51,12 +51,13 @@ public class ResultActivit extends AppCompatActivity {
 
     private void chengeText() {
         DecimalFormat mDf = new DecimalFormat("#.#");
+        double procent = (100*r)/3;
         if (r>=0&&r<=0.9){
-            rext_result.setText("Уровень риска = " + mDf.format(r) + "\n" + "Низкий уровень риска");
+            rext_result.setText("Степень риска = " + mDf.format(procent) + "%\n" + "Низкая степень риска");
         }else if (r>=1&&r<=2.9){
-            rext_result.setText("Уровень риска = " + mDf.format(r)+ "\n" + "Средний уровень риска");
+            rext_result.setText("Степень риска = " + mDf.format(procent) + "%\n" + "Средняя степень риска");
         }else if (r>3){
-            rext_result.setText("Уровень риска = " + mDf.format(r) + "\n" + "Высокий уровень риска");
+            rext_result.setText("Степень риска = " + mDf.format(procent) + "%\n" + "Высокая степень риска");
         }
     }
 }
