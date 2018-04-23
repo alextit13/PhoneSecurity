@@ -19,7 +19,7 @@ public class Recomendation extends AppCompatActivity {
     private Result result;
     private ResultNums tn;
     private double r;
-    private double r_0;
+    private double r_0,procent;
     private TextView tv_1, tv_2, tv_3, tv_4, tv_5, tv_6, tv_7, tv_8, tv_9, tv_10, tv_11, tv_12, tv_13, tv_14, tv_16;
     private CheckBox cb_1, cb_2, cb_3, cb_4, cb_5, cb_6, cb_7, cb_8, cb_9, cb_10, cb_11, cb_12, cb_13, cb_14, cb_16;
     private LinearLayout l_1, l_2, l_3, l_4, l_5, l_6, l_7, l_8, l_9, l_10, l_11, l_12, l_13, l_14, l_16;
@@ -35,6 +35,7 @@ public class Recomendation extends AppCompatActivity {
     private void getData() {
         result = (Result) getIntent().getSerializableExtra("result");
         r = getIntent().getDoubleExtra("r", 0);
+        procent = getIntent().getDoubleExtra("procent", 0);
         tn = (ResultNums) getIntent().getSerializableExtra("tn");
         r_0 = r;
     }
@@ -216,6 +217,7 @@ public class Recomendation extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 createNewResult();
+                r_0 = procent;
                 Intent intent = new Intent(Recomendation.this, FinishActivity.class);
                 intent.putExtra("r_0", r_0); // был
                 intent.putExtra("r", r);

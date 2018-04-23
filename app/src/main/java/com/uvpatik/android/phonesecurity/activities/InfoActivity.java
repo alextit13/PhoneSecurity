@@ -96,21 +96,23 @@ public class InfoActivity extends AppCompatActivity {
                 (ib_14*b_14)+
                 (ib_15*b_15)+
                 (ib_16*b_16);
-        createResult();
+        double maxResult = b_1+b_2+b_3+b_4+b_5+b_6+b_7+b_8+b_9+b_10+b_11+b_12+b_13+b_14+b_15+b_16;
+        createResult(maxResult);
     }
 
-    private void createResult() {
+    private void createResult(double max) {
         boolean b_1=false,b_2=false,b_3=false,b_4=false,b_5=false,b_6=false,b_7=false,b_8=false,b_9=false,b_10=false,b_11=false,b_12=false,b_13=false,b_14=false,b_15=false,b_16=false;
         if (ib_1==1){b_1=true;}if (ib_2==1){b_2=true;}if (ib_3==1){b_3=true;}if (ib_4==1){b_4=true;}if (ib_5==1){b_5=true;}if (ib_6==1){b_6=true;}if (ib_7==1){b_7=true;}
         if (ib_8==1){b_8=true;}if (ib_9==1){b_9=true;}if (ib_10==1){b_10=true;}if (ib_11==1){b_11=true;}if (ib_12==1){b_12=true;}if (ib_13==1){b_13=true;}if (ib_14==1){b_14=true;}
         if (ib_15==1){b_15=true;}if (ib_16==1){b_16=true;}
         Result r = new Result(b_1,b_2,b_3,b_4,b_5,b_6,b_7,b_8,b_9,b_10,b_11,b_12,b_13,b_14,b_15,b_16);
-        pushResult(r);
+        pushResult(r,max);
     }
 
-    private void pushResult(Result r) {
+    private void pushResult(Result r,double max) {
         Intent intent = new Intent(InfoActivity.this,ResultActivit.class);
         intent.putExtra("result", r);
+        intent.putExtra("max", max);
         intent.putExtra("r",result);
         ResultNums tn = new ResultNums(b_1,b_2,b_3,b_4,b_5,b_6,b_7,b_8,b_9,b_10,b_11,b_12,b_13,b_14,b_15,b_16);
         intent.putExtra("tn",tn);

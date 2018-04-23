@@ -17,7 +17,7 @@ public class ResultActivit extends AppCompatActivity {
 
     private Result result;
     private ResultNums tn;
-    private double r;
+    private double r,max,procent;
     private TextView rext_result;
     private Button show_recomendation;
 
@@ -32,6 +32,7 @@ public class ResultActivit extends AppCompatActivity {
         Intent intent = getIntent();
         result = (Result) intent.getSerializableExtra("result");
         tn = (ResultNums)intent.getSerializableExtra("tn");
+        max = intent.getDoubleExtra("max",0);
         r = intent.getDoubleExtra("r",0);
         rext_result = (TextView) findViewById(R.id.rext_result);
         show_recomendation = (Button) findViewById(R.id.show_recomendation);
@@ -43,6 +44,7 @@ public class ResultActivit extends AppCompatActivity {
                 i.putExtra("result",result);
                 i.putExtra("r",r);
                 i.putExtra("tn",tn);
+                i.putExtra("procent",procent);
                 startActivity(i);
             }
         });
@@ -51,7 +53,7 @@ public class ResultActivit extends AppCompatActivity {
 
     private void chengeText() {
         DecimalFormat mDf = new DecimalFormat("#.#");
-        double procent = (100*r)/3;
+        procent = (100*r)/max;
         if (r>=0&&r<=0.9){
             rext_result.setText("Степень риска = " + mDf.format(procent) + "%\n" + "Низкая степень риска");
         }else if (r>=1&&r<=2.9){

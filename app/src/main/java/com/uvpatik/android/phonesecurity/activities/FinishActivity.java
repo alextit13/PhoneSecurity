@@ -31,7 +31,7 @@ public class FinishActivity extends AppCompatActivity {
         r_1 = intent.getDoubleExtra("r",0);  // новый
 
         DecimalFormat mDf = new DecimalFormat("#.#");
-        double procent = (100*r_0)/3;
+        double procent = r_0;
         double procent_1 = (100*r_1)/3;
         ((TextView)findViewById(R.id.first_risk)).setText("Исходный риск: " + mDf.format(procent));
         ((TextView)findViewById(R.id.second_risk)).setText("Риск после выполнения рекомендаций: " + mDf.format(r_1));
